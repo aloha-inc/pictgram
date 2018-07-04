@@ -70,3 +70,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # gem 'capistrano-rails', group: :development
 
 gem 'bootstrap-sass'
+
+gem "jquery-rails"
