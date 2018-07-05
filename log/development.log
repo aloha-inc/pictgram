@@ -3050,3 +3050,28 @@ Migrating to CreateTopics (20180705090557)
   ↳ bin/rails:4
   [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
   ↳ bin/rails:4
+Started GET "/topics/new" for 127.0.0.1 at 2018-07-05 19:20:18 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/new.html.erb within layouts/application (7.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 1754ms (Views: 1734.5ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2018-07-05 19:20:47 +0900
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LSibeaBxHH3vrcksluVidZf2oJyQwdTr4D7+ydYkrxmOnRywunGVDh9e4EudBtKVwyndP58d38lRZagsF9SXCQ==", "topic"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fdadb42a168 @tempfile=#<Tempfile:/var/folders/q7/ln9cr2nn4vb5k8y6rr308mdw0000gn/T/RackMultipart20180705-30681-143iavp.jpg>, @original_filename="effecter1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"topic[image]\"; filename=\"effecter1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"AAA"}, "commit"=>"投稿"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `topics' for nil:NilClass):
+  
+app/controllers/topics_controller.rb:7:in `create'
