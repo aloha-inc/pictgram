@@ -3025,3 +3025,315 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT GET_LOCK('6372517130059550925', 0)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateTopics (20180705090557)
+  [1m[35m (27.1ms)[0m  [1m[35mCREATE TABLE `topics` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `description` varchar(255), `image` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180705090557_create_topics.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180705090557')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('6372517130059550925')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Started GET "/topics/new" for 127.0.0.1 at 2018-07-05 19:20:18 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/new.html.erb within layouts/application (7.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 1754ms (Views: 1734.5ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2018-07-05 19:20:47 +0900
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LSibeaBxHH3vrcksluVidZf2oJyQwdTr4D7+ydYkrxmOnRywunGVDh9e4EudBtKVwyndP58d38lRZagsF9SXCQ==", "topic"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fdadb42a168 @tempfile=#<Tempfile:/var/folders/q7/ln9cr2nn4vb5k8y6rr308mdw0000gn/T/RackMultipart20180705-30681-143iavp.jpg>, @original_filename="effecter1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"topic[image]\"; filename=\"effecter1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"AAA"}, "commit"=>"投稿"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `topics' for nil:NilClass):
+  
+app/controllers/topics_controller.rb:7:in `create'
+Started GET "/topics/new" for 127.0.0.1 at 2018-07-05 19:44:14 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 661ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...der: 1px solid ": expected ";", was "# e6ecf0;"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/custom.scss:116
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__733030184366105430_70289015304940'
+Started GET "/topics/new" for 127.0.0.1 at 2018-07-05 19:44:55 +0900
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 1306ms (Views: 1303.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2018-07-05 19:45:03 +0900
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RkC2FboRLSlPrG0uD2z1N5qnRJxkIL4Y0x/v6Z9prAPl9THcoBGkWr9fREkEj0XXzng5P2v8tTpiRLkMXpmUEw==", "topic"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fdadc6d60f0 @tempfile=#<Tempfile:/var/folders/q7/ln9cr2nn4vb5k8y6rr308mdw0000gn/T/RackMultipart20180705-30681-kagt32.jpg>, @original_filename="effecter1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"topic[image]\"; filename=\"effecter1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"AAA"}, "commit"=>"投稿"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `topics' for nil:NilClass):
+  
+app/controllers/topics_controller.rb:11:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2018-07-05 19:47:10 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 41ms (Views: 36.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-05 19:47:14 +0900
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-05 19:47:21 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"woF155BnnTLfFpbeBEPG2G/yDLm+mz6XmNK0a8jdOqPXoDHFDrQg2EQEyOZPZdzPfHbSl+lhkNR2P1AyAAEspg==", "session"=>{"email"=>"rhcp@com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'rhcp@com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 58ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-05 19:47:22 +0900
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-05 19:47:27 +0900
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2018-07-05 19:47:29 +0900
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2018-07-05 19:47:36 +0900
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8oxz/yjmdHG2HnS7vWcg2NHn9u8aTY1Hv36z8TNr7OBNZE4UjpbGP43MtBVyfy/StqsRnAcEm2b4SizazgyPaw==", "topic"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fdadb3b1c18 @tempfile=#<Tempfile:/var/folders/q7/ln9cr2nn4vb5k8y6rr308mdw0000gn/T/RackMultipart20180705-30681-r0x9bq.jpg>, @original_filename="effecter1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"topic[image]\"; filename=\"effecter1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"aaa"}, "commit"=>"投稿"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/topics_controller.rb:13
+  [1m[36mTopic Create (0.2ms)[0m  [1m[32mINSERT INTO `topics` (`user_id`, `description`, `image`, `created_at`, `updated_at`) VALUES (13, 'aaa', 'effecter1.jpg', '2018-07-05 10:47:36', '2018-07-05 10:47:36')[0m
+  ↳ app/controllers/topics_controller.rb:13
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/topics_controller.rb:13
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 26ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-05 19:47:36 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  Rendered topics/index.html.erb within layouts/application (3.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-07-05 19:53:00 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JKHCbFMSQrmaB1PkvqvQuRAT9mSDM8RSm4RcXgzu0gaHFEWlSRLLymr0eoO1SGBZRMyLx4zvz3Aq3wq7zR7qFg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-05 19:53:00 +0900
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-05 19:53:04 +0900
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-05 19:53:07 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5VtsdZYs3mw+dWLJM/fH6bg+tY9qoynCyAIdu9vC7NDweihXCP9jhqVnPPF40d3+q7proT1Zh4Em7/niEx761Q==", "session"=>{"email"=>"rhcp@com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'rhcp@com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 98ms (Views: 40.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-05 19:53:13 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rIVPwadSjVVeHYiQ4IPrrK9P/vPDE9N3mSLMqia0iOYPMMgIvVIEJq7uoffrYFtM+5CDUMzP2FUoeZpP50Sw9g==", "session"=>{"email"=>"rhcp@com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'rhcp@com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 58ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-05 19:53:13 +0900
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-07-05 19:53:16 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"u4u6Z28gl+4/CcS6VpE5M7/BFgM93Xx70Ojuls27+DAYPj2udSAenc/67d1dconT6x5roDIBd1lhs7hzDEvAIA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-05 19:53:16 +0900
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-07-05 19:53:20 +0900
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-07-05 19:53:25 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0AKZwCMJEAbdrinKfqPZJfzQ15Likz97MVs05N7s8U/FI93ivdqt7Ea8d/I1hcMy71QJvLVpkTjfttC9FjDnSg==", "session"=>{"email"=>"rhcp@com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'rhcp@com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 58ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-05 19:53:25 +0900
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2018-07-05 19:53:31 +0900
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2018-07-05 19:53:46 +0900
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K5zZpXsujZvJ4MQFPSWOa94Gi0+fqonJxEqY5P5kaumUdORO3V4/1fIyBKvyPYFhuUpsPILjn+iDfgfPAwMJYg==", "topic"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fdaddc2e178 @tempfile=#<Tempfile:/var/folders/q7/ln9cr2nn4vb5k8y6rr308mdw0000gn/T/RackMultipart20180705-30681-19docjg.jpg>, @original_filename="guitar_sample1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"topic[image]\"; filename=\"guitar_sample1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"BBBBBBBBBBBBBBBBBB"}, "commit"=>"投稿"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/topics_controller.rb:13
+  [1m[36mTopic Create (0.3ms)[0m  [1m[32mINSERT INTO `topics` (`user_id`, `description`, `image`, `created_at`, `updated_at`) VALUES (13, 'BBBBBBBBBBBBBBBBBB', 'guitar_sample1.jpg', '2018-07-05 10:53:46', '2018-07-05 10:53:46')[0m
+  ↳ app/controllers/topics_controller.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/topics_controller.rb:13
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-05 19:53:46 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/topics/index.html.erb:8
+  Rendered topics/index.html.erb within layouts/application (4.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.4ms)
+
+
