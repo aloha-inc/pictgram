@@ -1,4 +1,8 @@
 class TopicsController < ApplicationController
+  def index
+    @topics = Topic.all
+  end
+
   def new
     @topic = Topic.new
   end
@@ -17,5 +21,5 @@ class TopicsController < ApplicationController
   private
   def topic_params
     params.require(:topic).permit(:image, :description)
-  end      
+  end
 end
