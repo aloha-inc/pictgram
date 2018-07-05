@@ -1,3 +1,7 @@
+class Application < Rails::ApplicationRecord
+  config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
+end
+
 require_relative 'boot'
 
 require 'rails/all'
