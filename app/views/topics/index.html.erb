@@ -12,10 +12,24 @@
               <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
                 <%= image_tag 'icons/heart-black.png', class: 'topic-index-icon' %>
               <% end %>
+              <%= link_to new_comment_path do %>
+                <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+              <% end %>
             <% end %>
             <p class="topic-text">
               <%= topic.description %>
+            <h2 class="text-left text-black">コメント</h2>
             </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <% @comments.each do |comment| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="topic-index-single">
+            <h2 class="topic-author">
+          <%= @comment.comment %>
           </div>
         </div>
       </div>
