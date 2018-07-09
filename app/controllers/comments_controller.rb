@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
       redirect_to topics_path, success: 'コメントを追加しました'
     else
       flash.now[:danger] = "投稿に失敗しました"
-      redirect_to :action => "new"
+      render :new
     end
   end
 

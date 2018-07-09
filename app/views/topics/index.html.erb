@@ -20,19 +20,13 @@
               <%= topic.description %>
             <h2 class="text-left text-black">コメント</h2>
             </p>
+            <% topic.comments.each do |comment| %>
+              <%= simple_format(comment.comment) %>
+            <% end %>
           </div>
         </div>
       </div>
     <% end %>
-    <% @comments.each do |comment| %>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="topic-index-single">
-            <h2 class="topic-author">
-          <%= @comment.comment %>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    
   </div>
 </div>

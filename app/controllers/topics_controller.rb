@@ -1,7 +1,6 @@
 class TopicsController < ApplicationController
   def index
     @topics = Topic.all.includes(:favorite_users)
-    @comments = Comment.all.includes(:topic_id)
   end
 
   def new

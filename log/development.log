@@ -5033,3 +5033,2354 @@ Did you mean?  comments_new_path):
     9:             <%= f.text_area :comment, class: 'form-control' %>
   
 app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__2965234115568721454_70093980010120'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 09:50:10 +0900
+  [1m[35m (6.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (3.0ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.8ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (323.1ms)
+Completed 200 OK in 416ms (Views: 388.8ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 09:50:13 +0900
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/Users/nao-macbook/pictgram/app/views/comments/new.html.erb:6: syntax error, unexpected ':', expecting keyword_end
+r.append=  form_for @comment :url => {:action => 'new'} do |
+                              ^
+/Users/nao-macbook/pictgram/app/views/comments/new.html.erb:6: syntax error, unexpected keyword_do_block, expecting keyword_end
+ :url => {:action => 'new'} do |f| @output_buffer.safe_appen
+                              ^
+/Users/nao-macbook/pictgram/app/views/comments/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/comments/new.html.erb:6: syntax error, unexpected ':', expecting keyword_end
+app/views/comments/new.html.erb:6: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/comments/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 09:51:27 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (3.1ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.6ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 54ms (Views: 47.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 09:51:40 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (11.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 318ms (Views: 299.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 09:51:49 +0900
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 09:53:43 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 09:53:55 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 09:54:19 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 11:10:06 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 11:11:41 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 17:46:12 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 17:48:03 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 17:49:24 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"comments", :topic_id=>"15"}):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment, :url => {:action => 'show'} do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179650461400'
+Started POST "/comments" for 127.0.0.1 at 2018-07-09 17:51:12 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/comments"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 17:51:36 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (2.6ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (191.3ms)
+Completed 200 OK in 285ms (Views: 267.0ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 17:51:40 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"comments", :topic_id=>"15"}):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment, :url => {:action => 'show'} do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179684887880'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 17:53:49 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 64ms (Views: 60.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 17:55:46 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"comments", :topic_id=>"15"}):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment, :url => {:action => 'show'} do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179685618640'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 17:56:00 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  Rendered topics/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/nao-macbook/pictgram/app/views/topics/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/topics/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/comments/new?topic_id=15" for 127.0.0.1 at 2018-07-09 18:05:09 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment, :url => {:action => 'show'} do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179684183740'
+Started GET "/comments/new?topic_id=14" for 127.0.0.1 at 2018-07-09 18:05:12 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"14"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment, :url => {:action => 'show'} do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179663517080'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 18:05:13 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 89ms (Views: 77.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 18:05:14 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:05:16 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment, :url => {:action => 'show'} do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179709458620'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 18:05:47 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 65ms (Views: 61.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:05:49 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179630836000'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 18:07:44 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 79ms (Views: 69.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:07:46 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179709654880'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 18:08:04 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 71ms (Views: 60.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:08:06 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (107.1ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007fa7f652f760>:0x007fa7f652d550>
+Did you mean?  comments_new_path):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179684461420'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 18:09:32 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 95ms (Views: 83.5ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:09:34 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (134.0ms)
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007fa7f5caf040>:0x007fa7f5c9e178>
+Did you mean?  comments_new_path):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179680019640'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 18:10:04 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 64ms (Views: 55.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:10:06 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (104.9ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007fa7f976f4a0>:0x007fa7f976da10>
+Did you mean?  comments_new_path):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179710795420'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 18:10:26 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:10:27 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (175.8ms)
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007fa7f976f4a0>:0x007fa7f27883d0>
+Did you mean?  comments_new_path):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179652157740'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 18:10:36 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:10:38 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (93.3ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007fa7f976f4a0>:0x007fa7eeed3ad0>
+Did you mean?  comments_new_path):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179622411460'
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:10:54 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/nao-macbook/pictgram/app/views/comments/new.html.erb:6: syntax error, unexpected ':', expecting keyword_end
+r.append=  form_for @comment :url => {:action => 'new'} do |
+                              ^
+/Users/nao-macbook/pictgram/app/views/comments/new.html.erb:6: syntax error, unexpected keyword_do_block, expecting keyword_end
+ :url => {:action => 'new'} do |f| @output_buffer.safe_appen
+                              ^
+/Users/nao-macbook/pictgram/app/views/comments/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/comments/new.html.erb:6: syntax error, unexpected ':', expecting keyword_end
+app/views/comments/new.html.erb:6: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/comments/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2018-07-09 18:11:02 +0900
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:11:06 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/nao-macbook/pictgram/app/views/comments/new.html.erb:6: syntax error, unexpected ':', expecting keyword_end
+r.append=  form_for @comment :url => {:action => 'new'} do |
+                              ^
+/Users/nao-macbook/pictgram/app/views/comments/new.html.erb:6: syntax error, unexpected keyword_do_block, expecting keyword_end
+ :url => {:action => 'new'} do |f| @output_buffer.safe_appen
+                              ^
+/Users/nao-macbook/pictgram/app/views/comments/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/comments/new.html.erb:6: syntax error, unexpected ':', expecting keyword_end
+app/views/comments/new.html.erb:6: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/comments/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:11:22 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:11:29 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:11:40 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:26:07 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:26:13 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 18:31:29 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-07-09 19:15:17 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 79ms (Views: 73.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:15:20 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 66ms (Views: 56.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:15:25 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"comments/create", :controller=>"comments", :topic_id=>"15"}):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment, :url => {:action => 'comments/create'} do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1178045690298366318_70179679924540'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:16:49 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (285.5ms)
+Completed 200 OK in 367ms (Views: 348.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:16:51 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"comments#create", :controller=>"comments", :topic_id=>"15"}):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment, :url => {:action => 'comments#create'} do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1974832429180245504_70131299519380'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:18:14 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (2.4ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 55ms (Views: 47.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:18:15 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"topics#update", :controller=>"comments", :topic_id=>"15"}):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment, :url => {:action => 'topics#update'} do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1974832429180245504_70131296706000'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:18:23 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:18:36 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:18:43 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:18:52 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:19:38 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:20:05 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/topics/15/comments/new"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:20:10 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 60ms (Views: 57.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:20:11 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (98.6ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007f916e640e68>:0x007f9171abb760>
+Did you mean?  comments_new_path):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1974832429180245504_70131327041720'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:20:33 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:20:34 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (104.2ms)
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007f916e640e68>:0x007f9171092f68>
+Did you mean?  comments_new_path):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for @comment do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1974832429180245504_70131321707820'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:31:36 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 86ms (Views: 75.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:31:37 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Comment without an ID):
+  
+app/controllers/comments_controller.rb:7:in `new'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:31:46 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:35:06 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Comment without an ID):
+  
+app/controllers/comments_controller.rb:7:in `new'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:35:23 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 97ms (Views: 83.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:35:25 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (111.0ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007f916a78aed0>:0x007f916a789378>
+Did you mean?  comments_new_path):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for(@comment) do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1974832429180245504_70131266640940'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:37:30 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 79ms (Views: 67.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:37:32 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (88.4ms)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007f916e66de18>:0x007f916e66c040>
+Did you mean?  comments_new_path):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for(@comment) do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1974832429180245504_70131299611700'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:39:19 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 80ms (Views: 70.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:39:21 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/comments_controller.rb:6:in `new'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:41:26 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 108ms (Views: 93.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:41:28 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (101.1ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007f91718c15b8>:0x007f91718bb988>
+Did you mean?  comments_new_path):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for(@comment) do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb__1974832429180245504_70131325996980'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:44:53 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (276.1ms)
+Completed 200 OK in 355ms (Views: 337.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:44:55 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (112.3ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007fc43b70b6e0>:0x007fc43b709c78>
+Did you mean?  comments_new_path):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for(@comment) do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb___3908914356727641662_70240393781200'
+Started GET "/topics" for 127.0.0.1 at 2018-07-09 19:48:22 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/views/topics/index.html.erb:27
+  Rendered topics/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 78ms (Views: 74.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-09 19:48:25 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (92.9ms)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007fc43b70b6e0>:0x007fc4403016f8>
+Did you mean?  comments_new_path):
+    3:     <div class="row">
+    4:       <div class="col-md-6 col-md-offset-3">
+    5:         <h1 class="text-center">Post Comment</h1>
+    6:         <%= form_for(@comment) do |f| %>
+    7:           <div class="form-group">
+    8:             <%= f.label :comment %>
+    9:             <%= f.text_area :comment, class: 'form-control' %>
+  
+app/views/comments/new.html.erb:6:in `_app_views_comments_new_html_erb___3908914356727641662_70240433606820'
+Started GET "/" for 127.0.0.1 at 2018-07-10 00:41:03 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 340ms (Views: 331.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:41:04 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/nao-macbook/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered topics/index.html.erb within layouts/application (318.6ms)
+Completed 500 Internal Server Error in 346ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `topic' for #<#<Class:0x007fa224a973b0>:0x007fa224a95808>
+Did you mean?  @topics):
+    24:         </div>
+    25:       </div>
+    26:     <% end %>
+    27:     <% topic.comments.each do |comment| %>
+    28:       <div class="row">
+    29:         <div class="col-md-6 col-md-offset-3">
+    30:           <div class="topic-index-single">
+  
+app/views/topics/index.html.erb:27:in `_app_views_topics_index_html_erb__2934660511506197417_70167188258380'
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:41:47 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  Rendered topics/index.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    24:         </div>
+    25:       </div>
+    26:     <% end %>
+    27:     <% @topic.comments.each do |comment| %>
+    28:       <div class="row">
+    29:         <div class="col-md-6 col-md-offset-3">
+    30:           <div class="topic-index-single">
+  
+app/views/topics/index.html.erb:27:in `_app_views_topics_index_html_erb__2934660511506197417_70167240295780'
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:42:37 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  Rendered topics/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/nao-macbook/pictgram/app/views/topics/index.html.erb:27: syntax error, unexpected '.', expecting '|'
+topic.comments.each do |topic.comment| 
+                              ^
+/Users/nao-macbook/pictgram/app/views/topics/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/topics/index.html.erb:27: syntax error, unexpected '.', expecting '|'
+app/views/topics/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:45:20 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 67ms (Views: 63.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-10 00:45:22 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 53ms (Views: 47.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/topics/15/comments" for 127.0.0.1 at 2018-07-10 00:45:29 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1DhWwpreSkgs47jEE0vB8G6O+x0C6gllYwsjzfb++8oju6IyctU6PRlr0HWVMl//gxD7V0NNMwgZ9YRBQzt/7w==", "comment"=>{"comment"=>"GREAT!!!"}, "commit"=>"コメントを投稿", "topic_id"=>"15"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mComment Create (4.9ms)[0m  [1m[32mINSERT INTO `comments` (`topic_id`, `comment`, `created_at`, `updated_at`) VALUES (15, 'GREAT!!!', '2018-07-09 15:45:29', '2018-07-09 15:45:29')[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:14
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 12ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:45:29 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    21:             <h2 class="text-left text-black">コメント</h2>
+    22:             </p>
+    23:             <% topic.comments.each do |comment| %>
+    24:               <%= @comment.comment %>
+    25:             <% end %>
+    26:           </div>
+    27:         </div>
+  
+app/views/topics/index.html.erb:24:in `block (2 levels) in _app_views_topics_index_html_erb__2934660511506197417_70167248419620'
+app/views/topics/index.html.erb:23:in `block in _app_views_topics_index_html_erb__2934660511506197417_70167248419620'
+app/views/topics/index.html.erb:3:in `_app_views_topics_index_html_erb__2934660511506197417_70167248419620'
+Started POST "/topics/15/comments" for 127.0.0.1 at 2018-07-10 00:45:55 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GdVFs1v643ykiEBiTKTBT2sV5+0FOXgf9TMRgvPZPRm6YMJ6QfpqD1R7aQVHR3GvP8qaTgrlcz1EaEdnMikFCQ==", "comment"=>{"comment"=>"GREAT!!!"}, "commit"=>"コメントを投稿", "topic_id"=>"15"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO `comments` (`topic_id`, `comment`, `created_at`, `updated_at`) VALUES (15, 'GREAT!!!', '2018-07-09 15:45:55', '2018-07-09 15:45:55')[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:14
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:45:55 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 53ms (Views: 49.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-10 00:46:05 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-10 00:46:27 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics/15/comments" for 127.0.0.1 at 2018-07-10 00:46:28 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+m5Q4iZtMIa4ztKMyGCH+T8Iroo5x3FFkGLeklraOtQN7aQSzmZA841Guj1OGRn20pauwHhgSyjqnHke7x++8Q==", "comment"=>{"comment"=>""}, "commit"=>"コメントを投稿", "topic_id"=>"15"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:14
+Redirected to http://localhost:3000/topics/15/comments/new
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-10 00:46:28 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics/15/comments" for 127.0.0.1 at 2018-07-10 00:46:29 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+ju7DphX+UMIslJFYGPkJFNwz0ivVmRWecxIvgweLT9ZjjzHgldwMPhBeyJrgFTEB6+y66CKb3TIlx5bze4VLw==", "comment"=>{"comment"=>""}, "commit"=>"コメントを投稿", "topic_id"=>"15"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:14
+Redirected to http://localhost:3000/topics/15/comments/new
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-10 00:46:29 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics/15/comments" for 127.0.0.1 at 2018-07-10 00:46:40 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r04c42c1U7YrZe+4Ho0rqjCJzdg8O/qfDwRId1Tp8LUM+5sqfTXaxduWxt8VbptKZFawezPn8b2+Xx6SlRnIpQ==", "comment"=>{"comment"=>"WOW!"}, "commit"=>"コメントを投稿", "topic_id"=>"15"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO `comments` (`topic_id`, `comment`, `created_at`, `updated_at`) VALUES (15, 'WOW!', '2018-07-09 15:46:40', '2018-07-09 15:46:40')[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:14
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:46:40 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    21:             <h2 class="text-left text-black">コメント</h2>
+    22:             </p>
+    23:             <% topic.comments.each do |comment| %>
+    24:               <%= @comment.comment %>
+    25:             <% end %>
+    26:           </div>
+    27:         </div>
+  
+app/views/topics/index.html.erb:24:in `block (2 levels) in _app_views_topics_index_html_erb__2934660511506197417_70167292924700'
+app/views/topics/index.html.erb:23:in `block in _app_views_topics_index_html_erb__2934660511506197417_70167292924700'
+app/views/topics/index.html.erb:3:in `_app_views_topics_index_html_erb__2934660511506197417_70167292924700'
+Started POST "/topics/15/comments" for 127.0.0.1 at 2018-07-10 00:46:51 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r04c42c1U7YrZe+4Ho0rqjCJzdg8O/qfDwRId1Tp8LUM+5sqfTXaxduWxt8VbptKZFawezPn8b2+Xx6SlRnIpQ==", "comment"=>{"comment"=>"WOW!"}, "commit"=>"コメントを投稿", "topic_id"=>"15"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO `comments` (`topic_id`, `comment`, `created_at`, `updated_at`) VALUES (15, 'WOW!', '2018-07-09 15:46:51', '2018-07-09 15:46:51')[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:14
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 6ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:46:51 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-10 00:47:11 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics/15/comments" for 127.0.0.1 at 2018-07-10 00:47:21 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fwb5SOUwTG8R0Bf7OXWyizEj5ugpbRbuzI/yQ+aD3MuIhQ24DTs8GiRYf0q/DCyE3L3momjKLIO2cVXPU0ZY7g==", "comment"=>{"comment"=>"Nice!"}, "commit"=>"コメントを投稿", "topic_id"=>"15"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO `comments` (`topic_id`, `comment`, `created_at`, `updated_at`) VALUES (15, 'Nice!', '2018-07-09 15:47:21', '2018-07-09 15:47:21')[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:14
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:47:21 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 57ms (Views: 53.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-10 00:47:34 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:47:38 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (6.2ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 59ms (Views: 49.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:47:42 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 54ms (Views: 51.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-10 00:47:43 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:48:00 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    21:             <h2 class="text-left text-black">コメント</h2>
+    22:             </p>
+    23:             <% topic.comments.each do |comment| %>
+    24:               <%= @topic.comment %>
+    25:             <% end %>
+    26:           </div>
+    27:         </div>
+  
+app/views/topics/index.html.erb:24:in `block (2 levels) in _app_views_topics_index_html_erb__2934660511506197417_70167189755300'
+app/views/topics/index.html.erb:23:in `block in _app_views_topics_index_html_erb__2934660511506197417_70167189755300'
+app/views/topics/index.html.erb:3:in `_app_views_topics_index_html_erb__2934660511506197417_70167189755300'
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:48:04 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    21:             <h2 class="text-left text-black">コメント</h2>
+    22:             </p>
+    23:             <% topic.comments.each do |comment| %>
+    24:               <%= @topic.comment %>
+    25:             <% end %>
+    26:           </div>
+    27:         </div>
+  
+app/views/topics/index.html.erb:24:in `block (2 levels) in _app_views_topics_index_html_erb__2934660511506197417_70167247929620'
+app/views/topics/index.html.erb:23:in `block in _app_views_topics_index_html_erb__2934660511506197417_70167247929620'
+app/views/topics/index.html.erb:3:in `_app_views_topics_index_html_erb__2934660511506197417_70167247929620'
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-10 00:48:06 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:48:08 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for nil:NilClass):
+    21:             <h2 class="text-left text-black">コメント</h2>
+    22:             </p>
+    23:             <% topic.comments.each do |comment| %>
+    24:               <%= @topic.comment %>
+    25:             <% end %>
+    26:           </div>
+    27:         </div>
+  
+app/views/topics/index.html.erb:24:in `block (2 levels) in _app_views_topics_index_html_erb__2934660511506197417_70167283537700'
+app/views/topics/index.html.erb:23:in `block in _app_views_topics_index_html_erb__2934660511506197417_70167283537700'
+app/views/topics/index.html.erb:3:in `_app_views_topics_index_html_erb__2934660511506197417_70167283537700'
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:48:19 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for #<Topic:0x007fa224b5fef0>
+Did you mean?  comments
+               comments=):
+    21:             <h2 class="text-left text-black">コメント</h2>
+    22:             </p>
+    23:             <% topic.comments.each do |comment| %>
+    24:               <%= topic.comment %>
+    25:             <% end %>
+    26:           </div>
+    27:         </div>
+  
+app/views/topics/index.html.erb:24:in `block (2 levels) in _app_views_topics_index_html_erb__2934660511506197417_70167188730580'
+app/views/topics/index.html.erb:23:in `block in _app_views_topics_index_html_erb__2934660511506197417_70167188730580'
+app/views/topics/index.html.erb:3:in `_app_views_topics_index_html_erb__2934660511506197417_70167188730580'
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:48:32 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 58ms (Views: 55.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-10 00:49:35 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 60ms (Views: 52.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/topics/15/comments" for 127.0.0.1 at 2018-07-10 00:49:36 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9TSgwmIHnH53Ak9gGmyUUho9hLZPGfJF9pVNk5mpzHECt1QyigzsC0KKJ9GcFQpd96OE/A6+yCiMa+ofLGxIVA==", "comment"=>{"comment"=>""}, "commit"=>"コメントを投稿", "topic_id"=>"15"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:14
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 63ms (Views: 49.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/topics/15/comments" for 127.0.0.1 at 2018-07-10 00:49:38 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YIR7U00/diNZdPIxhxEsDQ8MZOGC/JvXBvo3TQeFBW/DMfyaVz//UKmH21aM8pztW9MZQo0gkPW3oWGoxnU9fw==", "comment"=>{"comment"=>""}, "commit"=>"コメントを投稿", "topic_id"=>"15"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/comments_controller.rb:14
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 52ms (Views: 48.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:52:37 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/15/comments/new" for 127.0.0.1 at 2018-07-10 00:52:47 +0900
+Processing by CommentsController#new as HTML
+  Parameters: {"topic_id"=>"15"}
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/topics/15/comments" for 127.0.0.1 at 2018-07-10 00:53:21 +0900
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hELhihuFvZTblGEqneElqzeQLkK437Zc4Uiu+letFf5zwRV6847N4e4cCZsbmLuk2g4uCPl4jDGbtgl24miR2w==", "comment"=>{"comment"=>"かっこいいですね！"}, "commit"=>"コメントを投稿", "topic_id"=>"15"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  `topics`.* FROM `topics` WHERE `topics`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO `comments` (`topic_id`, `comment`, `created_at`, `updated_at`) VALUES (15, 'かっこいいですね！', '2018-07-09 15:53:21', '2018-07-09 15:53:21')[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:14
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2018-07-10 00:53:21 +0900
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT `topics`.* FROM `topics`[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m
+  ↳ app/views/topics/index.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`topic_id` = 15[0m
+  ↳ app/views/topics/index.html.erb:23
+  Rendered topics/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.9ms)
+
+
